@@ -9,8 +9,6 @@ Resizes and caches images from google cloud storage.
 
 1. Run
 
-**TODO:** Use image from docker hub
-
 ```
 docker run -p 9000:80 selaamo/thumbnails
 ```
