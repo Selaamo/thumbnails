@@ -12,12 +12,12 @@ Resizes and caches images from google cloud storage.
 **TODO:** Use image from docker hub
 
 ```
-docker run -p 9000:80 resize:0.1
+docker run -p 9000:80 selaamo/thumbnails
 ```
 
 3. Fetch image:
 
-http://localhost:9000/t/200x200/<bucket-name>/<image-path>
+http://localhost:9000/t/200x200/[bucket-name]/[image-path]
 
 * `200x200` are the limits this image should resized to
 
@@ -30,4 +30,4 @@ http://localhost:9000/t/200x200/<bucket-name>/<image-path>
 
 Docker image is automatically built every time we push to this repo.
 
-Link to docker hub: **TODO**
+Link to docker hub: https://hub.docker.com/r/selaamo/thumbnails/
