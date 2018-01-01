@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: thumbnails
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: thumbnails-ip
+  labels:
+    app: thumbnails
+spec:
+  backend:
+    serviceName: thumbnails
+    servicePort: 80

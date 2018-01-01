@@ -1,0 +1,27 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: thumbnails
+  labels:
+    app: thumbnails
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: thumbnails
+        tier: web
+    spec:
+      containers:
+      - name: thumbnails
+        image: selaamo/thumbnails
+        env:
+          # Pass when securelinks module is enabled
+          - name: SECRET
+            value: "supersecret"
+        ports:
+        - containerPort: 80
+        # resources:
+        #   requests:
+        #     cpu: 200m
+        #     memory: 200Mi
